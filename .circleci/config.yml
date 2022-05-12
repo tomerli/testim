@@ -7,7 +7,7 @@ jobs:
     - image: testim/docker-cli
     steps :
       - run: mkdir -p $CIRCLE_TEST_REPORTS/testim/
-      - run: testim --token "HFPMMWmDBgphmMFNcfS4oxVts7JPyZChVl1rYgGXBPs5pkKT8C" --Suite "Multiple Error Test Suite" --grid "Testim-Grid" --report-file $CIRCLE_TEST_REPORTS/testim/results.xml
+      - run: testim --token "HFPMMWmDBgphmMFNcfS4oxVts7JPyZChVl1rYgGXBPs5pkKT8C" --suite "Multiple Error Test Suite" --grid "Testim-Grid" --report-file $CIRCLE_TEST_REPORTS/testim/results.xml
       - store_artifacts:
           path: /tmp/circleci-test-results
       - store_test_results:
