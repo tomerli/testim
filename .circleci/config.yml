@@ -5,7 +5,7 @@ jobs:
       CIRCLE_TEST_REPORTS: /tmp/circleci-test-results
     docker:
     - image: testim/docker-cli
-    steps:
+    steps :
       - run: mkdir -p $CIRCLE_TEST_REPORTS/testim/
       - run: testim --token "HFPMMWmDBgphmMFNcfS4oxVts7JPyZChVl1rYgGXBPs5pkKT8C" --project "8iuIg6jOYNgj5YnNs5RJ" --grid "Testim-Grid" --report-file $CIRCLE_TEST_REPORTS/testim/results.xml
       - store_artifacts:
